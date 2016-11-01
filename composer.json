@@ -1,0 +1,74 @@
+{
+  "name"              : "richaber/wp-composer-example",
+  "description"       : "Install the WordPress stack via Composer.",
+  "type"              : "project",
+  "authors"           : [
+    {
+      "name"     : "Richard Aber",
+      "email"    : "richaber@gmail.com",
+      "homepage" : "https://github.com/richaber/wp-composer-example"
+    }
+  ],
+  "config"            : {
+    "preferred-install" : "dist",
+    "bin-dir"           : "bin",
+    "vendor-dir"        : "vendor"
+  },
+  "repositories"      : [
+    {
+      "type" : "composer",
+      "url"  : "http://wpackagist.org"
+    }
+  ],
+  "minimum-stability" : "dev",
+  "require"           : {
+    "johnpbloch/wordpress"                    : "@stable",
+    "composer/installers"                     : "@stable",
+    "wpackagist-plugin/ewww-image-optimizer"  : "@stable",
+    "wpackagist-plugin/imsanity"              : "@stable",
+    "wpackagist-plugin/safe-redirect-manager" : "@stable",
+    "wpackagist-plugin/search-everything"     : "@stable",
+    "wpackagist-plugin/simple-page-ordering"  : "@stable",
+    "wpackagist-plugin/wordpress-seo"         : "@stable",
+    "wpackagist-plugin/wp-google-analytics"   : "@stable",
+    "wpackagist-plugin/wp-help"               : "@stable",
+    "wpackagist-theme/twentysixteen"          : "@stable"
+  },
+  "require-dev"       : {
+    "wp-sync-db/wp-sync-db"                                 : "@stable",
+    "wp-sync-db/wp-sync-db-media-files"                     : "@stable",
+    "wpackagist-plugin/debug-bar-actions-and-filters-addon" : "@stable",
+    "wpackagist-plugin/debug-bar-constants"                 : "@stable",
+    "wpackagist-plugin/debug-bar-cron"                      : "@stable",
+    "wpackagist-plugin/debug-bar-list-dependencies"         : "@stable",
+    "wpackagist-plugin/debug-bar-post-types"                : "@stable",
+    "wpackagist-plugin/debug-bar-remote-requests"           : "@stable",
+    "wpackagist-plugin/debug-bar-roles-and-capabilities"    : "@stable",
+    "wpackagist-plugin/debug-bar-shortcodes"                : "@stable",
+    "wpackagist-plugin/debug-bar-transients"                : "@stable",
+    "wpackagist-plugin/debug-bar"                           : "@stable",
+    "wpackagist-plugin/log-deprecated-notices"              : "@stable",
+    "wpackagist-plugin/query-monitor"                       : "@stable",
+    "wpackagist-plugin/rewrite-rules-inspector"             : "@stable",
+    "wpackagist-plugin/simply-show-ids"                     : "@stable",
+    "wpackagist-plugin/theme-check"                         : "@stable",
+    "wpackagist-plugin/user-switching"                      : "@stable",
+    "wpackagist-plugin/vip-scanner"                         : "@stable"
+  },
+  "extra"             : {
+    "wordpress-install-dir" : {
+      "johnpbloch/wordpress" : "wp"
+    },
+    "installer-paths"       : {
+      "wp-content/plugins/{$name}/"    : [
+        "type:wordpress-plugin"
+      ],
+      "wp-content/mu-plugins/{$name}/" : [
+        "type:wordpress-muplugin"
+      ],
+      "wp-content/themes/{$name}/"     : [
+        "type:wordpress-theme"
+      ]
+    }
+  }
+}
