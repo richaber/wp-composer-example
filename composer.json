@@ -35,8 +35,8 @@
     "wpackagist-theme/twentysixteen"          : "@stable"
   },
   "require-dev"       : {
-    "wp-sync-db/wp-sync-db"                                 : "@stable",
-    "wp-sync-db/wp-sync-db-media-files"                     : "@stable",
+    "wp-sync-db/wp-sync-db"                                 : "*",
+    "wp-sync-db/wp-sync-db-media-files"                     : "*",
     "wpackagist-plugin/debug-bar-actions-and-filters-addon" : "@stable",
     "wpackagist-plugin/debug-bar-constants"                 : "@stable",
     "wpackagist-plugin/debug-bar-cron"                      : "@stable",
