@@ -29,7 +29,7 @@
  *
  * @var string WP_HOME
  */
-define( 'WP_HOME', 'http:///wp-composer-example.dev' );
+define( 'WP_HOME', 'http://wp-composer-example.dev' );
 
 /** 
  * The URL to WordPress Core.
