@@ -1,18 +1,110 @@
-*.log
-wp-config.php
+################################################################################
+# Publicly available plugins and themes should be managed by Composer.
+# Therefore we gitignore plugins, themes, and mu-plugins by default.
+# WHITELIST items that SHOULD be under version control AT BOTTOM of .gitignore.
+################################################################################
+
+################################################################################
+# BLACKLIST all the cruft that we don't want under version control
+################################################################################
+
+# WordPress #
+#############
+.htaccess
 wp-content/advanced-cache.php
 wp-content/backup-db/
 wp-content/backups/
-wp-content/blogs.dir/
 wp-content/cache/
-wp-content/upgrade/
-wp-content/uploads/
+wp-content/mu-plugins/*
+wp-content/plugins/*
+wp-content/themes/*
+wp-content/upgrade/*
+wp-content/uploads/*
+wp-content/vendor/
 wp-content/wp-cache-config.php
-wp-content/plugins/hello.php
+wp/
+db-sync/
+local-config.php
+robots.txt
+sitemap.xml
+sitemap.xml.gz
+wp-local-config.php
 
-/.htaccess
-/license.txt
-/readme.html
-/sitemap.xml
-/sitemap.xml.gz
+# OS files #
+############
+._*
+.AppleDouble
+.DS_Store
+.DS_Store?
+.LSOverride
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
+# IDEs and Editors #
+####################
+_notes
+.cache
+.idea
+.project
+.settings
+*.esproj
+*.sublime-*
+*.tmproj
+*.tmproject
+*.vi
+dwsync.xml
+nbproject
+tmtags
+atlassian-ide-plugin.xml
+*.iml
+sftp_config.json
+
+# Miscellaneous #
+#################
+.vagrant
+*.bak
+*.diff
+*.err
+*.log
+*.orig
+*.rej
+*.sass-cache
+*.sql
+*.swo
+*.swp
+*.zip
+*~
+node_modules
+parameters.yml
+
+# Other VCSs #
+##############
+.hg
+.svn
+
+# Composer #
+############
+bin/*
+vendor/*
+
+################################################################################
+# Custom/premium items that can't be managed via Composer should be WHITELISTED
+################################################################################
+
+# WHITELIST composer.lock #
+###########################
+!composer.lock
+
+# WHITELIST themes #
+####################
+!wp-content/themes/my-custom-theme
+
+# WHITELIST plugins gitkeep #
+#############################
+!wp-content/plugins/my-custom-plugin
+
+# WHITELIST mu-plugins #
+########################
+!wp-content/themes/my-custom-mu-plugin

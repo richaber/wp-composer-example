@@ -1,2 +1,3 @@
-# wp-composer-example
-An example of a Composer managed WordPress project
+# WP Composer Example
+
+An example of a Composer managed WordPress project.
